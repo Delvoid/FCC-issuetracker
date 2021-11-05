@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const { Schema } = mongoose
+const Schema = mongoose.Schema
 
 const IssueSchema = new Schema({
   issue_title: { type: String, required: true },
@@ -8,8 +8,8 @@ const IssueSchema = new Schema({
   updated_on: Date,
   created_by: { type: String, required: true },
   assigned_to: { type: String },
-  openb: { type: Boolean },
+  open: { type: Boolean },
   status_text: { type: String },
 })
 
-module.exports = model('Issue', IssueSchema)
+module.exports = mongoose.model('Issue', IssueSchema)
