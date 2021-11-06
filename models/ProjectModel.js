@@ -7,7 +7,7 @@ const ProjectSchema = new Schema({
   name: { type: String, required: true },
   issues: [
     {
-      type: Schema.Types.Mixed,
+      type: Schema.Types.ObjectId,
       ref: 'Issue',
     },
   ],
